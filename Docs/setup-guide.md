@@ -129,6 +129,11 @@ From within `VM-Web1` or `VM-Web2`, open PowerShell and run:
 ```powershell
 Invoke-WebRequest -Uri "https://vmblob112.blob.core.windows.net/vmblob112-container/hello.txt" -OutFile "C:\hello.txt"
 
+```
+
+✅ If successful, the file hello.txt is downloaded to the VM.
+
+❌ Accessing this file from a public IP or browser should result in Access Denied.
 
 
 
