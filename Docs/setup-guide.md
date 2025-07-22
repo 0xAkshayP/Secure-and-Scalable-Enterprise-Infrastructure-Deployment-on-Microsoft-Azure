@@ -101,7 +101,7 @@ This step demonstrates how to securely connect Azure VMs to a Storage Account us
 
 - Go to **Azure Portal** > **Storage Accounts** > **+ Create**
 - **Settings**:
-  - **Resource Group**: `RG-Hub-Spoke`
+  - **Resource Group**: `Azure-Project1`
   - **Storage Account Name**: `vmblob112`
   - **Region**: Same as your VNet
 - Under **Networking**:
