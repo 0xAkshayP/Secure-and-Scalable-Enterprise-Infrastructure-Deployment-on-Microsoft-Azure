@@ -170,6 +170,61 @@ To securely access Azure Blob Storage from a VM using a private IP, we configure
    nslookup vmblob221.blob.core.windows.net
    ```
    
+## 🔟 Step 10: Configure Azure Monitor Alerts for VM and Resource Monitoring
+
+In this step, we configure an Azure Monitor Alert to notify us when our virtual machine (`VM-Web2`) exceeds a defined CPU usage threshold.
+
+---
+
+### 🎯 Objective:
+Trigger an alert when CPU usage is greater than 80% for a continuous duration of 5 minutes.
+
+---
+
+### ✅ Steps:
+
+1. **Open Azure Monitor**
+   - Go to the Azure portal and search for **"Monitor"** in the top search bar.
+   - Click on the Monitor service.
+
+   ![Monitor Overview](images/monitor-overview.png)
+
+2. **Create a New Alert Rule**
+   - Inside Monitor, go to **Alerts** from the sidebar.
+   - Click **+ Create** → **Alert rule**.
+
+3. **Define the Scope**
+   - Under **Scope**, click **Select resource**.
+   - Choose your virtual machine `VM-Web2`.
+
+   ![Select VM Scope](images/select-vm-scope.png)
+
+4. **Add a Condition**
+   - Click on **Add condition**.
+   - Select **Signal name:** `Percentage CPU`.
+   - Configure:
+     - **Operator:** Greater than  
+     - **Threshold value:** 80  
+     - **Aggregation type:** Average  
+     - **Over the last:** 5 minutes
+
+5. **Create an Action Group**
+   - Click **Add action group**.
+   - Set a name, such as `Email-Notify-VM`.
+   - Add your email address for notifications under **Email/SMS/Push/Voice**.
+
+6. **Name and Create the Alert Rule**
+   - Name the alert rule: `HighCPU-Alert-VM-Web2`
+   - Set Severity to **3 (Informational)** or as appropriate.
+   - Click **Review + Create** and then **Create**.
+
+   ![Alert Summary](images/alert-summary.png)
+
+---
+
+### 📌 Summary:
+You’ve now configured an Azure Monitor alert rule to track CPU usage on your VM. This helps you proactively monitor and respond to performance issues.
+
 
 
 
