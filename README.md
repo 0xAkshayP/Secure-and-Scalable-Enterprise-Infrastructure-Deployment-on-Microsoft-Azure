@@ -14,7 +14,7 @@ This project demonstrates the creation of a secure, enterprise-grade cloud envir
 
 ## 📐 Architecture
 
-![Architecture Diagram](./diagrams/full-architecture.png)
+![Architecture Diagram](./diagrams/architecture.png)
 
 ## 🚀 Deployment Overview
 
