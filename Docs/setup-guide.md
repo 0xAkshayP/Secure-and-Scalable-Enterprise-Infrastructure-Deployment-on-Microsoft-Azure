@@ -77,12 +77,16 @@ This guide walks you through building a secure enterprise network on Azure using
 
 ---
 
-✅ At this point, you've created:
-- Hub-and-spoke VNets
-- Two VMs (`VM-Web1`, `VM-Web2`) in private subnet
-- No public IPs = secure internal-only communication
+### ✅ Step 7: Install IIS on Web VMs
 
----
+After deploying `VM-Web1` and `VM-Web2`, connect to each VM using **Azure Bastion** and install IIS:
+
+1. Open PowerShell as Administrator
+2. Run the following command:
+
+```powershell
+Install-WindowsFeature -Name Web-Server -IncludeManagementTools
+
 
 
 
