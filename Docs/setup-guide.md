@@ -13,7 +13,7 @@ This guide walks you through building a secure enterprise network on Azure using
 2. Navigate to **Resource Groups** → Click **Create**
 3. Set:
    - Subscription: *Your Azure Free Subscription*
-   - Resource Group Name: `EnterpriseInfraRG`
+   - Resource Group Name: `Azure-Project1`
    - Region: `East US` (or closest to you)
 4. Click **Review + Create** → **Create**
 
