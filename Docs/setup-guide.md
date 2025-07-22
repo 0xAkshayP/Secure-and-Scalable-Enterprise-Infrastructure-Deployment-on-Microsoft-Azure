@@ -1,4 +1,4 @@
-# ☁️ Azure Enterprise Infrastructure – Manual Deployment Guide
+# ☁️ Azure Secure and Scalable Enterprise Infrastructure – Manual Deployment Guide
 
 This guide walks you through building a secure enterprise network on Azure using hub-and-spoke architecture, with private connectivity, Bastion access, and manual VM provisioning with IIS.
 
