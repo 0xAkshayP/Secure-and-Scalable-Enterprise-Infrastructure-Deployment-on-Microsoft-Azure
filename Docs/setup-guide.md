@@ -87,6 +87,48 @@ After deploying `VM-Web1` and `VM-Web2`, connect to each VM using **Azure Bastio
 ```powershell
 Install-WindowsFeature -Name Web-Server -IncludeManagementTools
 
+```
+
+
+
+## 🔐 Step 8: Secure Blob Storage Access Using Service Endpoint
+
+This step demonstrates how to securely connect Azure VMs to a Storage Account using a **Service Endpoint**. This ensures blob access is restricted to a specific VNet/Subnet, enhancing security while maintaining simplicity.
+
+---
+
+### 🛠️ 1. Create a Secure Storage Account
+
+- Go to **Azure Portal** > **Storage Accounts** > **+ Create**
+- **Settings**:
+  - **Resource Group**: `RG-Hub-Spoke`
+  - **Storage Account Name**: `vmblob112`
+  - **Region**: Same as your VNet
+- Under **Networking**:
+  - Choose **"Enable access from selected virtual networks"**
+  - Add:
+    - **Virtual Network**: `VNet-Spoke`
+    - **Subnet**: `subnet-vm` (where your VM is)
+- This action **automatically adds a Service Endpoint** to the subnet.
+
+---
+
+### 📦 2. Upload a Test Blob
+
+- Navigate to the created storage account > **Containers**
+- Create a new container: `vmblob112-container`
+  - Access level: `Private (no anonymous access)`
+- Upload a sample file: `hello.txt`
+
+---
+
+### 💻 3. Test Blob Access from VM
+
+From within `VM-Web1` or `VM-Web2`, open PowerShell and run:
+
+```powershell
+Invoke-WebRequest -Uri "https://vmblob112.blob.core.windows.net/vmblob112-container/hello.txt" -OutFile "C:\hello.txt"
+
 
 
 
