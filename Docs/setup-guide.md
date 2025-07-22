@@ -218,7 +218,7 @@ Trigger an alert when CPU usage is greater than 80% for a continuous duration of
    - Set Severity to **3 (Informational)** or as appropriate.
    - Click **Review + Create** and then **Create**.
 
-   ![Alert Summary](Images/step10-alert-summary.png)
+   ![Alert Summary](Images/step10-alert-rule-summary.png)
 
 ---
 
