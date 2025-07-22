@@ -135,5 +135,41 @@ Invoke-WebRequest -Uri "https://vmblob112.blob.core.windows.net/vmblob112-contai
 
 ❌ Accessing this file from a public IP or browser should result in Access Denied.
 
+## Step 9: Configure Azure Private Endpoint and DNS for Blob Storage
+
+To securely access Azure Blob Storage from a VM using a private IP, we configure a **Private Endpoint** with DNS integration.
+
+---
+
+### ✅ Objective
+
+- Create a Private Endpoint for the storage account (`vmblob221`)
+- Integrate with a Private DNS zone to resolve blob storage via private IP
+- Verify secure internal access
+
+---
+
+### 🔧 Tasks Performed
+
+1. **Created a Private Endpoint** for the storage account:
+   - Resource: `vmblob221`
+   - Sub-resource type: `blob`
+   - VNet/Subnet: `Spoke VNet` used by the VM
+   - Private IP assigned: e.g., `10.0.1.x`
+
+2. **Linked Private DNS Zone**:
+   - Zone: `privatelink.blob.core.windows.net`
+   - Linked to the `Spoke VNet` where VM is deployed
+   - Auto-registration enabled ✅
+
+3. **Verified DNS Resolution** from the VM:
+
+   Ran in PowerShell inside the VM:
+
+   ```powershell
+   nslookup vmblob221.blob.core.windows.net
+   ```
+   
+
 
 
