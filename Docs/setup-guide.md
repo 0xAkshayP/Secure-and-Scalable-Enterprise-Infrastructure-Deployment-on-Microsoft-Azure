@@ -187,7 +187,7 @@ Trigger an alert when CPU usage is greater than 80% for a continuous duration of
    - Go to the Azure portal and search for **"Monitor"** in the top search bar.
    - Click on the Monitor service.
 
-   ![Monitor Overview](images/monitor-overview.png)
+   ![Monitor Overview](Images/step10-monitor-overview.png)
 
 2. **Create a New Alert Rule**
    - Inside Monitor, go to **Alerts** from the sidebar.
@@ -197,7 +197,7 @@ Trigger an alert when CPU usage is greater than 80% for a continuous duration of
    - Under **Scope**, click **Select resource**.
    - Choose your virtual machine `VM-Web2`.
 
-   ![Select VM Scope](images/select-vm-scope.png)
+   ![Select VM Scope](Images/step10-select-vm-scope.png)
 
 4. **Add a Condition**
    - Click on **Add condition**.
@@ -218,7 +218,7 @@ Trigger an alert when CPU usage is greater than 80% for a continuous duration of
    - Set Severity to **3 (Informational)** or as appropriate.
    - Click **Review + Create** and then **Create**.
 
-   ![Alert Summary](images/alert-summary.png)
+   ![Alert Summary](Images/step10-alert-summary.png)
 
 ---
 
