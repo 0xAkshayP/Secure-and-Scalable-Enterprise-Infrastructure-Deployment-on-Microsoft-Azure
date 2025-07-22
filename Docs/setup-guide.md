@@ -79,7 +79,7 @@ This guide walks you through building a secure enterprise network on Azure using
 
 ### ✅ Step 7: Install IIS on Web VMs
 
-After deploying `VM-Web1` and `VM-Web2`, connect to each VM using **Azure Bastion** and install IIS:
+After deploying `VM-Web1` and `VM-Web2`, connect to each VM using **Azure Bastion** or **RDP** and install IIS:
 
 1. Open PowerShell as Administrator
 2. Run the following command:
